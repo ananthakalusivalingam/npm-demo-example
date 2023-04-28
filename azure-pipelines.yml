@@ -78,3 +78,9 @@ steps:
     includeDependencies: true
     copy: true
     dryRun: false
+- task: JFrogAudit@1
+  inputs:
+    xrayConnection: 'Artifactory'
+    watchesSource: 'project'
+    project: 'alpha'
+    allowFailBuild: true
