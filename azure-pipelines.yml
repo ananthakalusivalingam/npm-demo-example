@@ -61,7 +61,7 @@ steps:
 
 - task: ArtifactoryXrayScan@1
   inputs:
-    artifactoryService: 'Artifactory'
+    artifactoryService: 'soleng-xray2'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     allowFailBuild: false
