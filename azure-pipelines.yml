@@ -80,7 +80,7 @@ steps:
     dryRun: false
 - task: JFrogAudit@1
   inputs:
-    xrayConnection: 'Artifactory'
+    xrayConnection: 'soleng-xray2'
     watchesSource: 'project'
     project: 'alpha'
     allowFailBuild: true
