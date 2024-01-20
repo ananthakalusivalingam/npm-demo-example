@@ -34,7 +34,6 @@ steps:
 - script: |
     npm pack
   displayName: 'Build the package'
-
 - task: ArtifactoryGenericUpload@2
   inputs:
     artifactoryService: 'Artifactory'
@@ -53,7 +52,6 @@ steps:
     buildNumber: '$(Build.BuildNumber)'
     includeEnvVars: true
     failNoOp: true
-    projectKey: situsAMC
 - task: JFrogPublishBuildInfo@1
   inputs:
      artifactoryConnection: 'JFrog Artifactory V2'
