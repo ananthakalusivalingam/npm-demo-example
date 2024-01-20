@@ -59,9 +59,9 @@ steps:
      artifactoryConnection: 'JFrog Artifactory V2'
      buildName: '$(Build.DefinitionName)'
      buildNumber: '$(Build.BuildNumber)'
-- task: ArtifactoryXrayScan@1
+- task: JFrogBuildScan@1
   inputs:
-    artifactoryService: 'Artifactory'
+    xrayConnection: 'Artifactory'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     allowFailBuild: false
