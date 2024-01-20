@@ -61,6 +61,7 @@ steps:
      buildNumber: '$(Build.BuildNumber)'
 - task: JFrogBuildScan@1
   inputs:
+    vuln: false 
     xrayConnection: 'soleng-xray2'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
