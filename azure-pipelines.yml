@@ -52,13 +52,11 @@ steps:
     buildNumber: '$(Build.BuildNumber)'
     includeEnvVars: true
     failNoOp: true
-
 - task: ArtifactoryPublishBuildInfo@1
   inputs:
-    artifactoryService: :'Artifactory'
+    artifactoryService: 'Artifactory'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    projectKey: 'SitusAMC'
 
 - task: JFrogBuildPromotion@1
   inputs:
