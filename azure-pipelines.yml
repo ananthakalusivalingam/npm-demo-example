@@ -15,10 +15,10 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- task: JFrogNpm@1
+- task: ArtifactoryNpm@2
   inputs:
     command: 'install'
-    artifactoryConnection: 'JFrog Artifactory V2'
+    artifactoryService: 'Artifactory'
     sourceRepo: 'situsamc-npm-virtual'
     collectBuildInfo: true
     threads: '10'
