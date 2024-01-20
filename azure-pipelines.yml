@@ -75,10 +75,10 @@ steps:
     artifactoryService: 'Artifactory'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    targetRepo: 'alpha-npm-qa-local'
+    targetRepo: 'situsamc-npm-qa-local'
     status: 'Released'
     comment: 'ReadyForQA'
-    sourceRepo: 'alpha-npm-dev-local'
+    sourceRepo: 'situsamc-npm-dev-local'
     includeDependencies: true
     copy: true
     dryRun: false
