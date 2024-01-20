@@ -59,14 +59,6 @@ steps:
      artifactoryConnection: 'JFrog Artifactory V2'
      buildName: '$(Build.DefinitionName)'
      buildNumber: '$(Build.BuildNumber)'
-- task: JFrogBuildScan@1
-  inputs:
-    vuln: false 
-    xrayConnection: 'soleng-xray2'
-    buildName: '$(Build.DefinitionName)'
-    buildNumber: '$(Build.BuildNumber)'
-    allowFailBuild: true
-    projectKey: situsAMC
 - task: JFrogBuildPromotion@1
   inputs:
     artifactoryConnection: 'JFrog Artifactory V2'
