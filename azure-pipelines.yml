@@ -60,7 +60,6 @@ steps:
     artifactoryService: 'Artifactory'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    projectKey: situsAMC
 
 - task: ArtifactoryXrayScan@1
   inputs:
