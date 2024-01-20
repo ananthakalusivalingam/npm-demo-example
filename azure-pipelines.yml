@@ -59,7 +59,6 @@ steps:
      artifactoryConnection: 'JFrog Artifactory V2'
      buildName: '$(Build.DefinitionName)'
      buildNumber: '$(Build.BuildNumber)'
-     projectKey: situsAMC
 - task: ArtifactoryXrayScan@1
   inputs:
     artifactoryService: 'Artifactory'
