@@ -37,7 +37,7 @@ steps:
 
 - task: ArtifactoryGenericUpload@2
   inputs:
-    artifactoryService: 'Artifactory'
+    artifactoryService: 'JFrog Artifactory V2'
     specSource: 'taskConfiguration'
     fileSpec: |
       {
@@ -54,24 +54,22 @@ steps:
     includeEnvVars: true
     failNoOp: true
     projectKey: situsAMC
-
-- task: ArtifactoryPublishBuildInfo@1
+- task: JFrogPublishBuildInfo@1
   inputs:
-    artifactoryService: 'Artifactory'
-    buildName: '$(Build.DefinitionName)'
-    buildNumber: '$(Build.BuildNumber)'
-
+     artifactoryConnection: 'JFrog Artifactory V2'
+     buildName: '$(Build.DefinitionName)'
+     buildNumber: '$(Build.BuildNumber)'
+     projectKey: situsAMC
 - task: ArtifactoryXrayScan@1
   inputs:
-    artifactoryService: 'Artifactory'
+    artifactoryService: 'JFrog Artifactory V2'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     allowFailBuild: false
     projectKey: situsAMC
-
-- task: ArtifactoryBuildPromotion@1
+- task: JFrogBuildPromotion@1
   inputs:
-    artifactoryService: 'Artifactory'
+    artifactoryConnection: 'JFrog Artifactory V2'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     targetRepo: 'situsamc-npm-qa-local'
