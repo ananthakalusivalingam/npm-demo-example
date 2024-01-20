@@ -61,7 +61,7 @@ steps:
      buildNumber: '$(Build.BuildNumber)'
 - task: JFrogBuildScan@1
   inputs:
-    xrayConnection: 'Artifactory'
+    xrayConnection: 'soleng-xray2'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     allowFailBuild: false
