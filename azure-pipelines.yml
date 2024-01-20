@@ -71,16 +71,11 @@ steps:
     artifactoryService: 'Artifactory'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    targetRepo: 'alpha-npm-prod-local'
+    targetRepo: 'alpha-npm-qa-local'
     status: 'Released'
-    comment: 'ReadyForProd'
+    comment: 'ReadyForQA'
     sourceRepo: 'alpha-npm-dev-local'
     includeDependencies: true
     copy: true
     dryRun: false
-- task: JFrogAudit@1
-  inputs:
-    xrayConnection: 'soleng-xray2'
-    watchesSource: 'project'
-    project: 'alpha'
-    allowFailBuild: true
+
