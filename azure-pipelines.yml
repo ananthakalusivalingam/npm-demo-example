@@ -64,7 +64,7 @@ steps:
     xrayConnection: 'soleng-xray2'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    allowFailBuild: false
+    allowFailBuild: true
     projectKey: situsAMC
 - task: JFrogBuildPromotion@1
   inputs:
