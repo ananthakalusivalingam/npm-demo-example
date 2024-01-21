@@ -70,3 +70,32 @@ steps:
     includeDependencies: true
     copy: true
     dryRun: false
+- task: InvokeRESTAPI@1
+  inputs:
+    connectionType: 'connectedServiceName'
+    serviceConnection: 'generictosoleng'
+    method: 'POST'
+    headers: |
+      {
+      "Content-Type":"application/json", 
+      "AuthToken": "cmVmdGtuOjAxOjAwMDAwMDAwMDA6RjdLbUZJNmtsZUZTbFNFUWVybVoyRVVFS0pF"
+      "X-JFrog-Signing-Key-Name":"debian-erika"
+      }
+    body: |
+      {
+          "release_bundle_name": "SitusAMC-npm-Bundle",
+          "release_bundle_version": "2.0.0",
+          "source_type": "builds",
+          "source": {
+              "builds": [
+                  {
+                      "build_repository": "artifactory-build-info",
+                      "build_name": "ananthakalusivalingam.npm-demo-example",
+                      "build_number": "20240120.34",
+                      "build_started": "2024-01-20T22:41:26.467+0000",
+                      "include_dependencies": false
+                  }
+              ]
+          }
+      }
+    waitForCompletion: 'false'
