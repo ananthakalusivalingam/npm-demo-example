@@ -58,6 +58,14 @@ steps:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
 
+- task: JFrogBuildScan@1
+  inputs:
+    allowFailBuild: false
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+    projectKey: situsAMC
+    xrayConnection: 'JFrog Artifactory V2'
+    vuln: true
 - task: JFrogBuildPromotion@1
   inputs:
     artifactoryConnection: 'JFrog Artifactory V2'
@@ -70,4 +78,3 @@ steps:
     includeDependencies: true
     copy: true
     dryRun: false
-    
