@@ -67,9 +67,6 @@ steps:
   inputs:
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
-    allowFailBuild: true
-    buildName: '$(Build.DefinitionName)'
-    buildNumber: '$(Build.BuildNumber)'
     projectKey: situsAMC
     xrayConnection: 'soleng-xray2'
     vuln: true
